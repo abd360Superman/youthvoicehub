@@ -1,11 +1,12 @@
 # app.py
 from flask import Flask, render_template, request
 import openai
+import os
 
 app = Flask(__name__)
 
 # Set your OpenAI API key here
-openai.api_key = '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'
+openai.api_key = os.environ.get('OPENAI_API_KEY')
 
 messages = []
 
