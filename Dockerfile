@@ -20,7 +20,6 @@ WORKDIR /python-docker
 
 RUN pip3 install flask
 RUN pip3 install openai==0.28
-RUN pip3 install os
 
 COPY . .
 RUN ls
