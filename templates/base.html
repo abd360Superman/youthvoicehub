@@ -1,0 +1,58 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <br>
+        <div class="container">
+            <h1 class="title">YouthVoice Hub</h1>
+            <center><img class="image" src="{{ url_for('static', filename='images/worse.avif') }}"></center>
+        </div>
+    </header>
+
+    <br>
+
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+
+    <br>
+
+    <footer>
+        <div class="container">
+            <h2>Tips to Feel Better</h2>
+            <ul>
+                <li><strong>Seek Professional Help:</strong> Consider reaching out to a therapist or counselor who can provide support and guidance.</li>
+                <li><strong>Practice Self-Care:</strong> Prioritize activities that promote physical and emotional well-being, such as <a href="https://anticancerlifestyle.org/fitness/">exercise</a>, <a href="https://www.thenobletouch.org/anxiety-stress-relief-registration-page">relaxation techniques</a>, and <a href="https://blog.mercy.com/hobbies-improving-mental-health/">hobbies.</a></li>
+                <li><strong>Establish a Routine:</strong> Create a <a href="https://www.indeed.com/career-advice/career-development/create-a-daily-schedule">daily routine</a> that includes <a href="https://www.betterhealth.vic.gov.au/health/healthyliving/teenagers-and-sleep">regular sleep patterns</a>, meals, and activities.</li>
+                <li><strong>Limit Stress:</strong> Identify <a href="https://www.who.int//news-room/questions-and-answers/item/stress/">sources of stress</a> in your life and take steps to reduce or manage them.</li>
+                <li><strong>Stay Connected:</strong> Maintain social connections with friends, family, or support groups.</li>
+                <li><strong>Practice Mindfulness:</strong> Engage in <a href="https://www.hakomieducation.net/event">mindfulness practices</a>, such as <a href="https://isha.sadhguru.org/in/en/yoga-meditation/yoga-program-for-beginners/isha-kriya-meditation">meditation</a> or <a href="https://kadampa.org/books/meditation-and-mindfulness-training-and-exercises">deep breathing</a> exercises, to stay grounded and reduce anxiety.</li>
+                <li><strong>Challenge Negative Thoughts:</strong> Pay attention to your thoughts and challenge negative thinking patterns with positive affirmations.</li>
+                <li><strong>Set Realistic Goals:</strong> Break tasks into <a href="https://www.bowdoin.edu/baldwin-center/pdf/handout-breaking-large-projects-down.pdf">smaller, manageable steps</a> and set realistic goals for yourself.</li>
+                <li><strong>Stay Active:</strong> Incorporate <a href="https://www.supportrealteachers.org/research-on-the-benefits-of-physical-activity-for-schools.html">regular physical activity</a> into your routine to improve mood and <a href="https://www.who.int/news-room/fact-sheets/detail/depression/">reduce symptoms of depression.</a></li>
+                <li><strong>Seek Support:</strong> Don't hesitate to reach out to friends, family, or support groups for help and encouragement.</li>
+                <li><strong>Listening to Music:</strong> Listening to music can really help calming your mind, be it your favorite music or regular, peaceful music. Below are some suggestions: </li>
+                <div class="container">
+                    <li><strong><a href="https://www.youtube.com/watch?v=I3OJUwILelU">Relaxing Music</a></strong></li>
+                    <li><strong><a href="https://www.youtube.com/watch?v=3NycM9lYdRI">Calming Piano</a></strong></li>
+                    <li><strong><a href="https://www.youtube.com/watch?v=_4kHxtiuML0">Focus Music</a></strong></li>
+                    <li><strong><a href="https://www.youtube.com/watch?v=0Ni00XDSd6E">Tibetian Healing and Relaxtion Music</a></strong></li>
+                    <li><strong><a href="https://www.youtube.com/watch?v=bP9gMpl1gyQ">Sleep Music + Insomnia</a></strong></li>
+                </div>
+            </ul>
+            <center>
+                <img class="image" src="{{ url_for('static', filename='images/better.jpeg') }}">
+                <img class="image" src="{{ url_for('static', filename='images/helpinghand.jpg') }}">
+            </center>
+        </div>
+        <br>
+    </footer>
+</body>
+</html>

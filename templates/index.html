@@ -1,0 +1,16 @@
+<!-- templates/index.html -->
+{% extends 'base.html' %}
+
+{% block title %}YouthVoice Hub{% endblock %}
+
+{% block content %}
+<h2>Express your thoughts to the Chatbot</h2>
+<div class="container">
+    <div>Talk to Eva, and express your concerns. It is really important for you to express the way you feel. </div>
+    <br>
+    <form action="/chat" method="post" class="chat-form">
+        <input type="text" name="user_message" class="user-input" placeholder="Type your message...">
+        <input type="submit" value="Send" class="submit-button">
+    </form>
+</div>
+{% endblock %}
